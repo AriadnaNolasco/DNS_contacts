@@ -1,0 +1,11 @@
+<form action="/contacts/<%= contact.id %>" method="post" enctype="multipart/form-data" class="mt-4">
+  <div class="mb-3"><input name="first_name" class="form-control" value="<%= contact.first_name %>" required/></div>
+  <div class="mb-3"><input name="last_name" class="form-control" value="<%= contact.last_name %>" required/></div>
+  <div class="mb-3"><input name="email" type="email" class="form-control" value="<%= contact.email %>" required/></div>
+  <div class="mb-3"><input name="date_of_birth" type="date" class="form-control" value="<%= contact.date_of_birth %>"/></div>
+  <div class="mb-3">
+    <label>Photo (upload to replace)</label>
+    <input name="photo" type="file" accept="image/*" class="form-control"/>
+  </div>
+  <button class="btn btn-primary">Update</button>
+</form>
